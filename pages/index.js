@@ -5,11 +5,7 @@ import Card from "../components/organisms/Card";
 import Greeting from "../components/molecules/Greeting";
 
 export default function Home() {
-  const name = "Talha",
-    surname = "Samin";
-
   const [data, setData] = useState([]);
-
   useEffect(() => {
     Axios.get("https://dummy-api.deta.dev/user").then((resp) => {
       setData(resp.data);
@@ -19,7 +15,10 @@ export default function Home() {
   return (
     <div>
       {/* <Card name={name} surname={surname} /> */}
-      {JSON.stringify(data)}
+      {/* {JSON.stringify(data)} */}
+      {data.map((value, index) => {
+        return <Card {...data} />;
+      })}
     </div>
   );
 }
