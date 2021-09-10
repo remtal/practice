@@ -17,7 +17,7 @@ export default function Home() {
       {/* <Card name={name} surname={surname} /> */}
       {/* {JSON.stringify(data)} */}
       {data.map((value, index) => {
-        return <Card {...data} />;
+        return <Card {...value} />;
       })}
     </div>
   );

@@ -1,5 +1,5 @@
+import { CardStyle } from "./styles";
 import React from "react";
-import Title from "../../atoms/Title";
 
 export default function Card({
   name,
@@ -11,16 +11,13 @@ export default function Card({
   description,
 }) {
   return (
-    <Title>
-      <div>
-        <span>{name}</span>
-        <span>{surname}</span>
-        <span>{email}</span>
-        <span>{dob}</span>
-        <img src={profilePicture} />
-        <span>{theme}</span>
-        <span>{description}</span>
-      </div>
-    </Title>
+    <CardStyle theme={theme}>
+      <span>{name}</span>
+      <span>{surname}</span>
+      <span>{email}</span>
+      <span>{dob}</span>
+      <img src={profilePicture} />
+      <span>{description}</span>
+    </CardStyle>
   );
 }
