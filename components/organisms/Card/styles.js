@@ -25,6 +25,8 @@ export const CardStyle = styled.div`
 
   background-color: ${({ theme }) => themes[theme || "light"].body};
   color: ${({ theme }) => themes[theme || "light"].text};
+  //How does above code work?
+  //How to create Cards as Grids (display: grid;)?
 
   img {
     width: 205.35px;
@@ -35,6 +37,7 @@ export const CardStyle = styled.div`
     top: 1.84%;
     bottom: 57.29%;
   }
+  //Unable to create function for image
 `;
 
 export const Name = styled.span`
@@ -51,6 +54,7 @@ export const Surname = styled.span`
   font-size: 18px;
   line-height: 21px;
 `;
+//Unable to seperate Name and Surname ('right' didn't work)
 
 export const Email = styled.p`
   left: 25%;
