@@ -1,4 +1,13 @@
-import { CardStyle } from "./styles";
+import {
+  CardStyle,
+  DOB,
+  Description,
+  Email,
+  Name,
+  Picture,
+  Surname,
+} from "./styles";
+
 import React from "react";
 
 export default function Card({
@@ -11,13 +20,15 @@ export default function Card({
   description,
 }) {
   return (
-    <CardStyle theme={theme}>
-      <span>{name}</span>
-      <span>{surname}</span>
-      <span>{email}</span>
-      <span>{dob}</span>
-      <img src={profilePicture} />
-      <span>{description}</span>
-    </CardStyle>
+    <div>
+      <CardStyle theme={theme}>
+        <img src={profilePicture} />
+        <Name>{name}</Name>
+        <Surname>{surname}</Surname>
+        <Email>{email}</Email>
+        <Description>{description}</Description>
+        <DOB>{dob}</DOB>
+      </CardStyle>
+    </div>
   );
 }
