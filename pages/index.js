@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 
 import Axios from "axios";
 import Card from "../components/organisms/Card";
-import Greeting from "../components/molecules/Greeting";
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -12,10 +11,14 @@ export default function Home() {
     });
   }, []);
 
+  const cardDisplay = {
+    display: "flex",
+    flexWrap: "wrap",
+    flexDirection: "row",
+    //justifyContent: "space-between",
+  };
   return (
-    <div>
-      {/* <Card name={name} surname={surname} /> */}
-      {/* {JSON.stringify(data)} */}
+    <div style={cardDisplay}>
       {data.map((value, index) => {
         return <Card {...value} />;
       })}
