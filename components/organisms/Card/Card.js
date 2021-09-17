@@ -1,14 +1,13 @@
-import {
-  CardStyle,
-  DOB,
-  Description,
-  Email,
-  Name,
-  Picture,
-  Surname,
-} from "./styles";
+import { CardStyle, DOB, Description, Email, Name, Picture } from "./styles";
 
 import React from "react";
+
+function getFormattedDate(dob) {
+  const date = new Date(dob);
+  const formattedDate =
+    date.getDate() + "." + date.getMonth() + "." + date.getFullYear();
+  return formattedDate;
+}
 
 export default function Card({
   name,
@@ -25,7 +24,7 @@ export default function Card({
       <Name>{name + " " + surname}</Name>
       <Email>{email}</Email>
       <Description>{description}</Description>
-      <DOB>{dob}</DOB>
+      <DOB>Bdate {getFormattedDate(dob)} 🎉</DOB>
     </CardStyle>
   );
 }
