@@ -1,4 +1,4 @@
-import { CardDisplay, Header } from "./styles";
+import { CardLayout, Header } from "./styles";
 import React, { useEffect, useState } from "react";
 
 import Axios from "axios";
@@ -13,11 +13,11 @@ export default function Home() {
   }, []);
 
   return (
-    <CardDisplay>
+    <CardLayout>
       <Header>People</Header>
       {data.map((value, index) => {
         return <Card {...value} />;
       })}
-    </CardDisplay>
+    </CardLayout>
   );
 }

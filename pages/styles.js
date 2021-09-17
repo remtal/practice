@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CardDisplay = styled.div`
+export const CardLayout = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

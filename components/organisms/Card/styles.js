@@ -76,9 +76,3 @@ export const Picture = styled.img`
   grid-area: picture;
   grid-row: row1-start;
 `;
-
-export const Title = styled.h1`
-  font-family: "Roboto", sans-serif;
-  position: absolute;
-  text-align: left;
-`;
