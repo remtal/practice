@@ -1,6 +1,8 @@
-import { CardStyle, DOB, Description, Email, Name, Picture } from "./styles";
+import React, { useState } from "react";
 
-import React from "react";
+import { CardStyle } from "./styles";
+import Default from "./Default";
+import Greeting from "../../molecules/Greeting/Greeting";
 
 function getFormattedDate(dob) {
   const date = new Date(dob);
@@ -18,18 +20,23 @@ export default function Card({
   theme,
   description,
 }) {
+  const [selected, setSelected] = useState();
   return (
-    <CardStyle theme={theme}>
-      <Picture src={profilePicture} />
-      <Name>{name + " " + surname}</Name>
-      <Email>{email}</Email>
-      <Description>{description}</Description>
-      <DOB>Bdate {getFormattedDate(dob)} 🎉</DOB>
+    <CardStyle button onClick={() => setSelected(!selected)} theme={theme}>
+      {selected ? (
+        <Greeting {...{ name }} />
+      ) : (
+        <Default
+          {...{
+            name,
+            surname,
+            email,
+            dob,
+            profilePicture,
+            description,
+          }}
+        />
+      )}
     </CardStyle>
   );
 }
-
-/*
-Use a React Hook, UseState (selected, setSelected), initial useState is set to normal card by default, 
-upon click it changes to Greeting card. Return the normal image, <button onClick> -> setSelected to greeting card.
-*/

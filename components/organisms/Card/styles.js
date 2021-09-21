@@ -68,8 +68,8 @@ export const Description = styled.p`
 `;
 
 export const Picture = styled.img`
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   padding: 20px;
   object-fit: cover;

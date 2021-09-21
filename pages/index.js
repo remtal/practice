@@ -6,6 +6,7 @@ import Card from "../components/organisms/Card";
 
 export default function Home() {
   const [data, setData] = useState([]);
+
   useEffect(() => {
     Axios.get("https://dummy-api.deta.dev/user").then((resp) => {
       setData(resp.data);

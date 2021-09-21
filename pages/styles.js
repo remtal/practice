@@ -6,8 +6,9 @@ export const CardLayout = styled.div`
   flex-direction: row;
 `;
 
-export const Header = styled.h1`
+export const Header = styled.div`
   font-family: "Roboto", sans-serif;
-  margin-right: 1000px;
-  text-align: center;
+  margin-right: 1200px;
+  margin-left: 17px;
+  font-size: 60px;
 `;
