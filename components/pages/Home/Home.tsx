@@ -2,7 +2,7 @@ import { CardLayout, Header } from "./styles";
 import React, { useEffect, useState } from "react";
 
 import Axios from "axios";
-import Card from "../organisms/Card";
+import Card from "../../organisms/Card";
 
 export default function Home() {
   const [data, setData] = useState([]);
