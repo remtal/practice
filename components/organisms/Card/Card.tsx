@@ -28,9 +28,9 @@ export default function Card({
   theme,
   description,
 }: Props) {
-  const [selected, setSelected] = useState();
+  const [selected, setSelected] = useState<boolean>();
   return (
-    <CardStyle onClick={() => setSelected(selected)} theme={theme}>
+    <CardStyle onClick={() => setSelected(!selected)} theme={theme}>
       {selected ? (
         <Greeting {...{ name }} />
       ) : (
