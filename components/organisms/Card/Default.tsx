@@ -1,13 +1,22 @@
-import { CardStyle, DOB, Description, Email, Name, Picture } from "./styles";
+import { DOB, Description, Email, Name, Picture } from "./styles";
 
 import React from "react";
 
-function getFormattedDate(dob) {
+function getFormattedDate(dob: string) {
   const date = new Date(dob);
   const formattedDate =
     date.getDate() + "." + date.getMonth() + "." + date.getFullYear();
   return formattedDate;
 }
+interface Props {
+  name: string;
+  surname: string;
+  email: string;
+  dob: string;
+  description: string;
+  profilePicture: string;
+}
+
 export default function Default({
   name,
   surname,
@@ -15,7 +24,7 @@ export default function Default({
   dob,
   profilePicture,
   description,
-}) {
+}: Props) {
   return (
     <>
       <Picture src={profilePicture} />

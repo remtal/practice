@@ -1,6 +1,10 @@
+import { Props } from "react";
 import styled from "styled-components";
 
-const themes = {
+interface Theme {
+  theme: string;
+}
+const themes: any = {
   dark: {
     body: "#000",
     text: "#fff",
@@ -31,8 +35,8 @@ export const CardStyle = styled.div`
     "description description description description"
     "dob dob dob dob";
 
-  background-color: ${({ theme }) => themes[theme || "light"].body};
-  color: ${({ theme }) => themes[theme || "light"].text};
+  background-color: ${({ theme }: Theme) => themes[theme || "light"].body};
+  color: ${({ theme }: Theme) => themes[theme || "light"].text};
 `;
 
 export const Name = styled.span`
